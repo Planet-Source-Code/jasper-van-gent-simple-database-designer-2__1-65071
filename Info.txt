@@ -1,0 +1,4 @@
+Designed and developed by:
+Jasper van Gent
+
+This application is freeware and OpenSource. Read the GPL terms and conditions for more information. You can find the SourceCode inside the Simple Database Designer directory into your program files (Source.rar).

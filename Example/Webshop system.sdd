@@ -1,0 +1,59 @@
+[SIMPLE DATABASE DESIGNER 2]
+Created: 20-04-2006
+Version: 2.0.40
+
+[PROJECT]
+Project<|BREAK|>16777215<|BREAK|>210,0088<|BREAK|>297,0039<|BREAK|>5
+
+[LAYERS]
+Layer<|BREAK|>Default
+Layer<|BREAK|>Other_relations
+Layer<|BREAK|>Relation_with_categorie_and_product
+Layer<|BREAK|>Tables
+
+[TABLE]
+Table<|BREAK|>Products<|BREAK|>Tables<|BREAK|>4,99181<|BREAK|>4,99181<|BREAK|>40,00504<|BREAK|>40,00504<|BREAK|>9426649
+Column<|BREAK|>id<|BREAK|>INT(11) [PA]
+Column<|BREAK|>categorie_id<|BREAK|>INT(11) []
+Column<|BREAK|>title<|BREAK|>VARCHAR(45) []
+Column<|BREAK|>description<|BREAK|>TEXT() []
+Column<|BREAK|>price<|BREAK|>VARCHAR(10) []
+Column<|BREAK|>enabled<|BREAK|>SMALLINT(1) []
+
+[TABLE]
+Table<|BREAK|>Charts<|BREAK|>Tables<|BREAK|>89,9937<|BREAK|>34,99559<|BREAK|>40,00504<|BREAK|>40,00504<|BREAK|>12782170
+Column<|BREAK|>id<|BREAK|>INT(11) [PA]
+Column<|BREAK|>customer_id<|BREAK|>INT(11) []
+Column<|BREAK|>product_id<|BREAK|>INT(11) []
+Column<|BREAK|>categorie_id<|BREAK|>INT(11) []
+Column<|BREAK|>orders<|BREAK|>SMALLINT(2) []
+Column<|BREAK|>created<|BREAK|>DATETIME() []
+
+[TABLE]
+Table<|BREAK|>Categories<|BREAK|>Tables<|BREAK|>4,99181<|BREAK|>109,9962<|BREAK|>40,00504<|BREAK|>40,00504<|BREAK|>14521600
+Column<|BREAK|>id<|BREAK|>INT(11) [PA]
+Column<|BREAK|>title<|BREAK|>VARCHAR(45) []
+Column<|BREAK|>description<|BREAK|>TEXT() []
+Column<|BREAK|>enabled<|BREAK|>SMALLINT(1) []
+
+[TABLE]
+Table<|BREAK|>Customers<|BREAK|>Tables<|BREAK|>154,9931<|BREAK|>75,00063<|BREAK|>50,0063<|BREAK|>69,99118<|BREAK|>11403716
+Column<|BREAK|>id<|BREAK|>INT(11) [PA]
+Column<|BREAK|>firstname<|BREAK|>VARCHAR(45) []
+Column<|BREAK|>middlename<|BREAK|>VARCHAR(45) []
+Column<|BREAK|>lastname<|BREAK|>VARCHAR(45) []
+Column<|BREAK|>gender<|BREAK|>SMALLINT(1) []
+Column<|BREAK|>address<|BREAK|>VARCHAR(45) []
+Column<|BREAK|>number<|BREAK|>VARCHAR(10) []
+Column<|BREAK|>zipcode<|BREAK|>VARCHAR(6) []
+Column<|BREAK|>city<|BREAK|>VARCHAR(45) []
+Column<|BREAK|>province<|BREAK|>VARCHAR(45) []
+Column<|BREAK|>phone<|BREAK|>VARCHAR(45) []
+Column<|BREAK|>fax<|BREAK|>VARCHAR(45) []
+Column<|BREAK|>email<|BREAK|>VARCHAR(45) []
+
+[RELATIONS]
+Relation<|BREAK|>Categorie to product<|BREAK|>Relation_with_categorie_and_product<|BREAK|>Products|categorie_id<|BREAK|>Categories|id<|BREAK|>0<|BREAK|>1
+Relation<|BREAK|>Chart to product<|BREAK|>Other_relations<|BREAK|>Products|id<|BREAK|>Charts|product_id<|BREAK|>1<|BREAK|>0
+Relation<|BREAK|>Chart to categorie<|BREAK|>Other_relations<|BREAK|>Categories|id<|BREAK|>Charts|categorie_id<|BREAK|>1<|BREAK|>0
+Relation<|BREAK|>Chart to customer<|BREAK|>Other_relations<|BREAK|>Customers|id<|BREAK|>Charts|customer_id<|BREAK|>1<|BREAK|>0
