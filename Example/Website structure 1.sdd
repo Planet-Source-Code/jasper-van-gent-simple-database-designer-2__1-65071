@@ -1,0 +1,29 @@
+[SIMPLE DATABASE DESIGNER 2]
+Created: 20-04-2006
+Version: 2.0.40
+
+[PROJECT]
+Project<|BREAK|>16777215<|BREAK|>210,0088<|BREAK|>297,0039<|BREAK|>5
+
+[LAYERS]
+Layer<|BREAK|>Default
+
+[TABLE]
+Table<|BREAK|>Website_Pages<|BREAK|>Default<|BREAK|>4,99181<|BREAK|>4,99181<|BREAK|>40,00504<|BREAK|>40,00504<|BREAK|>14710041
+Column<|BREAK|>id<|BREAK|>INT(11) [PA]
+Column<|BREAK|>title<|BREAK|>VARCHAR(45) []
+Column<|BREAK|>content<|BREAK|>TEXT() []
+Column<|BREAK|>enabled<|BREAK|>SMALLINT(1) []
+Column<|BREAK|>created<|BREAK|>DATETIME() []
+
+[TABLE]
+Table<|BREAK|>Website_Menu<|BREAK|>Default<|BREAK|>69,99118<|BREAK|>44,99685<|BREAK|>40,00504<|BREAK|>40,00504<|BREAK|>6431781
+Column<|BREAK|>id<|BREAK|>INT(11) [PA]
+Column<|BREAK|>title<|BREAK|>VARCHAR(45) []
+Column<|BREAK|>referer<|BREAK|>INT(11) []
+Column<|BREAK|>url<|BREAK|>VARCHAR(100) []
+Column<|BREAK|>enabled<|BREAK|>SMALLINT(1) []
+Column<|BREAK|>created<|BREAK|>DATETIME() []
+
+[RELATIONS]
+Relation<|BREAK|>Website_Menu referer to Website_Pages id<|BREAK|>Default<|BREAK|>Website_Pages|id<|BREAK|>Website_Menu|referer<|BREAK|>0<|BREAK|>1
